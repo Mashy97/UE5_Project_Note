@@ -1,0 +1,63 @@
+UE5 5.4v Project
+24.11.11
+001. Input Attack Type
+
+1. Boss, Normal NPC의 Attack Type을 확인하여 공격에 따른 맞는 모션을 출력
+- Boss의 공격에 따라 Attack Type을 부여하여 Player Character에 맞는 모션을 출력
+
+Implement.
+1. 열거형 변수 생성
+Content Drawer에서 우클릭 - 블루프린트 - 열거형
+'AttackType' 생성 
+
+공격 엑터 설정
+- Attack Actor Blueprint Setting -
+( Attack Actor = Boss Actor )
+2. Actor Blueprint에 Attack Type 변수 생성
+
+3. Play Montage( Attack Motion )이후 Set Attack Type 설정
+
+4. Apply Damage의 Damage Causer에 공격 Actor( Boss Actor ) 연결
+
+5. Hit Actor에 Evnet Any Damage 노드 생성
+
+타격 엑터 설정
+- Hit Actor Blueprint Setting - 
+( Hit Actor = Player Character )
+6. Event Any Damage 노드 생성
+
+7. Evenet Any Damage노드의 Damage Causer를 Cast to Boss Actor
+
+8. Cast Boss Actor에서 Get AttackType 확인
+
+9. Switch AttackType을 사용하여 Attack Type 설정
+
+10. Attack Type에 따른 Play Montage 출력 ( Play Montage Target - Hit Actor )
+
+========================================================================================
+Implement.
+1. Create Enumeration Variables
+Right-click in Content Drawer - Blueprint - Enumeration
+Create 'AttackType' 
+
+- Attack Actor Blueprint Setting -
+( Attack Actor = Boss Actor )
+2. Create Attack Type Variables in the Actor Blueprint
+
+3. Play Montage( Attack Motion ) -  Set Attack Type 
+
+4. Apply Damage - Damage Causer - Input Attack Actor( Boss Actor ) 
+
+5. Create Evnet Any Damage Node in Hit Actor
+
+- Hit Actor Blueprint Setting - 
+( Hit Actor = Player Character )
+6. Create an Event Any Damage Node
+
+7. Evenet Any Damage - Damage Causer - Cast to Boss Actor
+
+8. Cast Boss Actor - Get AttackType
+
+9. Set Attack Type Using Switch Attack Type
+
+10. Get Attack Type Value - Play Montage  ( Play Montage Target - Hit Actor )
