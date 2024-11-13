@@ -1,0 +1,18 @@
+UE5 5.4v Project
+24.11.13
+002. Random Attack
+
+1. NPC, Player Attack이 설정한 여러개의 공격 중 하나가 출력되도록 설정
+
+Implement.
+
+1. Random Integer in Range 생성
+- 공격 애니메이션 갯수에 따라 Min Max 설정
+ex) Attack Type = 4개 -> Min 0, Max 3
+
+2. Switch on Int 생성
+- Random Integer in Range - Selection에 연결
+- Range 값에 따른 Pin 추가 및 설정
+
+3. Switch Pin에 Play Anim Montage 연결
+
