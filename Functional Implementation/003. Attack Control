@@ -1,0 +1,16 @@
+UE5 5.4v Project
+24.11.25
+
+003. Attack Control
+점프, 상호작용 중 공격을 하면 공격 Montage가 출력되는 현상을 제어
+
+Implement.
+
+1. Attack System Blueprint에서 캐릭터의 Movement 정보를 가져온다
+- Character Movement에서 Get Movement Mode를 하여 Movement 정보를 확인
+
+2. Movement의 정보를 이용하여 함수를 제작
+- MovementWalking 함수를 생성하여 Movement가 Walking일 경우 True를 출력
+ex) 
+
+3. Input Key에 Branch와 MovementWalking을 연결하여 공격 제어
