@@ -1,0 +1,14 @@
+ISSUE.
+캐릭터가 점프 도중 보스에 공격에 맞는다면 공중에서 맞는 모션이 출력되는 현상
+( 맞는 모션이 출력되는 동안 공중에 체공하고 있는 문제 )
+
+Setting.
+1. Sound(Noise)를 발생한 Actor에게 Set Actor Ratation, Set Focus 설정
+2. Character Blueprint에 Get_OffsetRootRotationMode에 Root Rotation Mode를 Release로 수정
+Rotation Mode Release - 모든 오프셋을 블렌딩한 후 캡슐 회전에 고정
+Rotation Mode Accumulate - 루트가 캡슐 회전의 변경 사항을 반대로 회전
+
+Solution.
+1. Actor Blueprint의 Character Movement - Root Motion - 
+애님 루트 모션 중 피직스 회전 허용 체크 
+Allow rotation during anim root motion ( True )
