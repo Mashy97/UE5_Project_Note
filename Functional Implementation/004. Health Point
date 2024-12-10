@@ -1,0 +1,17 @@
+UE5 5.4v Project
+24.12.10
+
+004. Health Point
+HP를 설정하여 데미지가 들어 왔을 경우 차감하는 방식
+HP가 0이 될 경우 쓰러지는 Anim Montage를 출력하도록 설정
+
+Implement.
+
+1. Health Point - Float 변수 생성 
+
+2. Event Any Damage 생성 후 Subtract Health Point(A) to Damage(B) 
+
+3. 결과 값에 따라서 값 변화
+1) Subtract 값이 0보다 같거나 작다면 쓰러지는 Montage Play
+( 쓰러진 상태를 유지하고 싶다면 Enable Auto Blend Out 비활성화 )
+2) 결과 값이 0보다 크다면 Set Health Point 적용
